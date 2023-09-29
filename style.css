@@ -22,6 +22,8 @@ header {
     width: 15vw;
     background-color: #333;
     box-shadow: 0 0 5px 1px #181818;
+    overflow: hidden;
+    position: sticky;
 }
 
 nav {
@@ -39,14 +41,14 @@ ul {
 }
 
 i {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 li {
     font-family: 'Montserrat', sans-serif;
     color: #EC625F;
     font-size: 1rem;
-    
+    margin-bottom: 20px
 }
 
 li:hover {
@@ -68,19 +70,21 @@ nav li {
     background: url(./logo.png);
     background-size: 100%;
     border-radius: 100%;
-    margin-top: 82.5vh;
     transform: scaleX(-1);
-    animation: .4s
+    animation: .4s;
+    position: absolute;
+    bottom: -50px;
+    margin-bottom: 0;
 }
 
 .element_moves_up {
     animation: move_up ease-in-out .4s;
-    margin-top:82.5vh;
+    bottom: -10px;
 }
 
 .element_moves_down {
     animation: move_down ease-in-out .4s;
-    margin-top: 87vh;
+    bottom: -50px;
 }
 
 footer {
@@ -103,18 +107,18 @@ h2{
 
 @keyframes move_up {
     from {
-      margin-top: 87vh;
+        bottom: -50px;
     }
     to {
-        margin-top:82.5vh;
+        bottom: -10px
     }
   }
 
 @keyframes move_down {
     from {
-      margin-top:82.5vh;
+        bottom: -10px;
     }
     to {
-        margin-top: 87vh;
+        bottom: -50px;
     }
   }
